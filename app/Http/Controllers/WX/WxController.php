@@ -24,4 +24,13 @@ class WxController extends Controller
            die('not ok');
         }
     }
+
+
+
+    public function wxx(){
+        $log_file="wx.log";
+        $xml_str=file_get_contents("php://input");
+        $data=date('Y-m-d H:i:s',time()).$xml_str;
+        file_put_contents($log_file,$data,FILE_APPEND);
+    }
 }
