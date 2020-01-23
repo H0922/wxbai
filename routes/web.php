@@ -21,6 +21,7 @@ Route::get('info', function () {
 
 Route::get('wx','WX\WxController@wx');
 Route::post('wx','WX\WxController@wxx');
+Route::get('gets','WX\WxController@gets');
 
 
 

@@ -33,4 +33,8 @@ class WxController extends Controller
         $data=date('Y-m-d H:i:s',time()).$xml_str;
         file_put_contents($log_file,$data,FILE_APPEND);
     }
+    public function gets(){
+        $a=file_get_contents('http://sc.guojunshop.com/m');
+        echo $a;
+    }
 }
